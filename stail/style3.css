@@ -1,0 +1,81 @@
+.website-process {
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Сітка */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.step-block {
+    box-sizing: border-box; 
+    width: 50%;            
+    height: 40vh;          
+    min-height: 250px;      
+    border: 1px solid #e06666;
+    padding: 20px;
+}
+
+
+.step-block:nth-child(even) {
+    border-left: none; 
+}
+
+.step-block:nth-child(n+3) {
+    border-top: none; 
+}
+
+/* Стиль цифр у колах */
+.step-block h3 {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.step-block h3 span {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #e06666;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 22px;
+    margin-right: 10px;
+    font-weight: normal;
+    color: #e06666;
+}
+
+/* Списки */
+.step-block ul {
+    list-style: none; 
+    padding-left: 35px;
+}
+
+.step-block li {
+    font-size: 12px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+/* Червоний колір для парних елементів списку */
+.step-block li:nth-child(even) {
+    color: #e06666;
+}
+
+/* Кастомний маркер через ::before */
+.step-block li::before {
+    content: "-";
+    position: absolute;
+    left: -15px;
+    color: inherit;
+}
